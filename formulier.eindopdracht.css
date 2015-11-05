@@ -1,0 +1,486 @@
+/* ---->>>> ALGEMEEN <<<<---- */
+* {
+    box-sizing: border-box;
+    font-family: "Open Sans";
+    text-decoration: none;
+}
+html {
+    width: 100%;
+    margin: auto;
+    font-size: 105%;
+    font-weight: 100;
+}
+/* ---->>>> NAVIGATIE <<<<---- */
+.flex-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 2%;
+    margin-top: -1em;
+}
+.flex-item {
+    font-size: 1.1em;
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+ul, li {
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+}
+img {
+    width: 17%;
+    float: right;
+    margin-right: 2%;
+    margin-top: -4.7em;
+}
+body > header {
+    background-color: #FFD300;
+    margin: -1.65em -0.5em 0em -0.5em;
+}
+body > header > p {
+    font-size: 0.8em;
+    padding: 0 0 0.5% 2%;
+    margin-top: 0.7em;
+}
+body > header > h1 + p {
+    display: none;
+}
+body > header > form {
+    float: right;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+body > header > nav > div > div > li > a {
+    color: #404040;
+    transition-duration: 0.55s;
+    transition-delay: 0.1s;
+    transition-timing-function: ease-in-out;
+}
+body > header > nav > div > div > li > a:hover {
+    color: #686868;
+    font-size: 0.95em;
+}
+header > h1 {
+    font-size: 2.5em;
+    color: #404040;
+    padding: 0 0 0 2%;
+}
+/* ---->>>> ZICHTBAARHEID VAN DE H1 OP DESKTOP <<<<---- */
+@media (min-width:55em) {
+    header > h1:nth-of-type(2) {
+        display: none;
+    }
+    body > main > h1 + a {
+        display: none;
+    }
+}
+/* ---->>>> PAGINA <<<<---- */
+main, .related {
+    width: 50%;
+    margin: 0% 35% 0% 15%;
+}
+.related > article + header {
+    display: flex;
+    flex-direction: row;
+}
+.related > article > section {
+    width: 30%;
+    display: inline-block;
+    flex-direction: row;
+    vertical-align: top;
+    flex-wrap: wrap;
+}
+.related > article > section > ul > li > a {
+    text-align: left;
+    font-size: 1.5em;
+    margin-left: -2.5em;
+}
+h1 {
+    font-size: 2.5em;
+    color: #393939;
+}
+a {
+    color: #686868;
+}
+/* ---->>>> FORMULIER <<<<---- */
+body > main > form {
+    width: 20em;
+    margin: auto;
+}
+input, textarea {
+    border: solid 0.1em #7F7F7F;
+    border-radius: 0.3em;
+    box-shadow: 0em 0em 0.5em 0.2em #E1E1E1;
+    transition-property: box-shadow;
+    transition-duration: 0.35s;
+    transition-delay: 0.1s;
+    transition-timing-function: ease;
+    margin: 0em 0em 0.7em 0em;
+}
+input[type="text"], input[type="tel"], input[type="email"], textarea {
+    width: 100%;
+    height: 3em;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+}
+textarea {
+    height: 12em;
+}
+input:hover {
+    box-shadow: 0em 0em 0.1em 0.1em #FFD300;
+}
+fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    border-style: solid;
+    border-color: #393939;
+    border-radius: 0.25em;
+    border-width: 0.1em;
+    margin: 1em 0 1em 0;
+}
+legend {
+    font-weight: 500;
+}
+body > main > input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: baseline;
+}
+input[type="submit"] {
+    width: 55%;
+    height: 2.5em;
+    border-radius: 0.3em;
+    color: #393939;
+    background-color: #FFD300;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-color: #FFD300;
+    margin-top: 1em;
+    margin-left: 22.5%;
+    margin-right: 22.5%;
+}
+/* ----->>>> FORMULIER ZICHTBAARHEID <<<<---- */
+#stage, #project {
+    display: none;
+}
+.show {
+    display: block !important;
+}
+/* ---->>>> SIDEBAR <<<<---- */
+aside {
+    width: 20%;
+    float: right;
+    position: absolute;
+    top: 40%;
+    right: 2%;
+}
+body > aside > section {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    border: solid 0.15em;
+    padding: 0.2em 0.2em 0.2em 0.2em;
+    margin-bottom: 0.5em;
+}
+ul, li {
+    text-decoration: none;
+    list-style: none;
+}
+/* ---->>> FOOTER <<<<---- */
+body > footer {
+    clear: both;
+    background: #FFD300;
+    padding: 1em 1em 8em 1em;
+    margin: 0em -0.45em -1em -0.45em;
+}
+body > footer > section {
+    display: inline-block;
+    width: 25%;
+    float: left;
+    padding: 0 2em 0 0;
+}
+body > footer > section > h2 {
+    color: #404040;
+    font-size: 1em;
+    font-weight: 600;
+}
+body > footer > section > p, ul {
+    font-size: 0.6em;
+}
+/* ---->>>> TABLET VERSIE <<<<---- */
+@media (max-width: 55em) {
+    html {
+        width: 100%;
+    }
+    main, .related{
+        width: 60%;
+        margin: auto;
+    }
+    /* ---->>>> NAVIGATIE <<<<---- */
+    body > header > h1 {
+        font-size: 2.5em;
+        padding: 0.5em 0em 0em 0.5em;
+    }
+    body > main > h1 + a {
+        display: none;
+    }
+    header > h1:nth-of-type(1) {
+        display: none;
+    }
+    body > header {
+        margin-left: -0.5em;
+        margin-right: -0.5em;
+    }
+    img {
+        width: 25%;
+    }
+    .flex-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .flex-item {
+        font-size: 80%;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 0%;
+    }
+    /* ---->>>> FORMULIER <<<<---- */
+    input[type="text"], input[type="tel"], input[type="email"], textarea {
+        width: 100%;
+        height: 4em;
+        border-radius: 0.5em;
+        display: flex;
+        flex-direction: column;
+    }
+    textarea {
+        height: 5.5em;
+    }
+    #sitemap {
+        display: none;
+    }
+    body > footer {
+        clear: both;
+        background: #FFD300;
+        padding: 1em 1em 2em 1em;
+        margin: 0em -0.45em 1em -0.45em;
+    }
+    body > footer > section {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+    }
+    body > footer > section > h2 {
+        color: #404040;
+        font-size: 1em;
+        font-weight: 600;
+    }
+    body > footer > section > p {
+        font-size: 0.9em;
+        margin: 0em 0em 0.2em 0;
+    }
+    /* ---->>>> SIDEBAR <<<<---- */
+    body > aside {
+        width: 60%;
+        margin: 0% 20% 0% 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        top: 0em;
+    }
+    body > aside > section {
+        display: flex;
+        flex-direction: column;
+        border: solid 0.1em;
+        padding: 0.2em 0.5em 0.2em 0.5em;
+        margin-bottom: 0.5em;
+    }
+}
+
+/* ---->>>> MOBIELE VERSIE <<<<---- */
+@media (max-width: 40em) {
+    html {
+        width: 100%;
+    }
+    /* ---->>>> NAVIGATIE <<<<---- */
+    body > header > h1 {
+        font-size: 150%;
+        padding: 0.8em 0em 0em 0.8em;
+        margin: 0.5em 0 0 0;
+    }
+    body > header > p {
+        display: none;
+    }
+    img {
+        width: 12%;
+        float: right;
+        margin-right: 2.5%;
+        margin-top: -2em;
+        padding: auto;
+    }
+    .closed {
+        color: #393939;
+        width: 50%;
+        height: 8em;
+        margin: auto;
+    }
+    .flex-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .flex-item {
+        font-size: 85%;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: 0.3em;
+    }
+    body > header > ul, li {
+        text-decoration: none;
+        list-style: none;
+        padding: 0.3em;
+        font-size: 1.3em;
+    }
+    body > header > form {
+        display: none;
+    }
+    /* ---->>>> PAGINA MOBIEL <<<<---- */
+    body {
+        width: 100%;
+        margin: auto;
+    }
+    main {
+        width: 90%;
+        margin: auto;
+    }
+    body > main > h1 {
+        display: none;
+    }
+    body > main > a:nth-of-type(1) {
+        display: flex;
+        font-weight: 500;
+        font-size: 1.9em;
+    }
+    .related {
+        width: 90%;
+        margin: auto;
+    }
+    body > section {
+        width: 100%;
+        margin-left: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+    .related > article > section {
+        width: 49%;
+        padding: 0.4em;
+        display: inline-block;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    body > section > article {
+        float: left;
+        justify-content: space-around;
+        width: 100%;
+        padding: 0.3em;
+        border: solid 0.1em;
+        margin: 0.1em;
+    }
+    body > aside {
+        width: 90%;
+        margin-right: 2.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        top: 0em;
+    }
+    body > aside > section {
+        display: flex;
+        flex-direction: column;
+        border: solid 0.1em;
+        padding: 0.2em 0.5em 0.2em 0.5em;
+        margin-bottom: 0.5em;
+    }
+    /* ---->>>> FORMULIER <<<<---- */
+    body > main > form {
+        width: 100%;
+        margin: auto;
+    }
+    fieldset {
+        width: 100%;
+    }
+    input[type="submit"] {
+        width: 100%;
+        height: 3.5em;
+        border-radius: 0.3em;
+        color: #393939;
+        background-color: #FFD300;
+        font-size: 1em;
+        text-transform: uppercase;
+        font-weight: 600;
+        border-color: #FFD300;
+        margin-top: 0.2em;
+        margin: auto;
+    }
+    input[type="text"], input[type="tel"], input[type="email"], textarea {
+        width: 100%;
+        height: 4em;
+        border-radius: 0.5em;
+        display: flex;
+        flex-direction: column;
+    }
+    textarea {
+        height: 5.5em;
+    }
+    /* ---->>>> FOOTER <<<<---- */
+    body > footer {
+        clear: both;
+        background: #FFD300;
+        padding: 1em 1em 0.1em 1em;
+        margin: 0em;
+    }
+    body > footer > section > h2 {
+        color: #404040;
+        font-size: 1em;
+        font-weight: 600;
+    }
+    body > footer > section > p {
+        font-size: 0.9em;
+        margin: 0em 0em 0.2em 0;
+    }
+    body > footer > section {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+    }
+    #sitemap {
+        display: none;
+    }
+}
+    /* ---->>>>  <<<<---- */
