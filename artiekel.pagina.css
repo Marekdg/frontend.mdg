@@ -1,0 +1,369 @@
+* {
+    box-sizing: border-box;
+    font-family: "Open Sans" sans-serif;
+    text-decoration: none;
+}
+html {
+    width: 100%;
+    margin: auto;
+    font-size: 105%;
+    font-weight: 100;
+}
+/* ---->>>> NAVIGATIE <<<<---- */
+.flex-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 2%;
+    margin-top: -1em;
+}
+.flex-item {
+    font-size: 1.1em;
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+ul, li {
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+}
+img {
+    width: 17%;
+    float: right;
+    margin-right: 2%;
+    margin-top: -4.7em;
+}
+body > header {
+    background-color: #FFD300;
+    margin: -1.65em -0.5em 0em -0.5em;
+}
+body > header > p {
+    font-size: 0.8em;
+    padding: 0 0 0.5% 2%;
+    margin-top: 0.7em;
+}
+body > header > h1 + p {
+    display: none;
+}
+body > header > form {
+    float: right;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+body > header > nav > div > div > li > a {
+    color: #404040;
+    transition-duration: 0.55s;
+    transition-delay: 0.1s;
+    transition-timing-function: ease-in-out;
+}
+body > header > nav > div > div > li > a:hover {
+    color: #686868;
+    font-size: 0.95em;
+}
+body > header > h1 {
+    font-size: 2.5em;
+    color: #404040;
+    padding: 0 0 0 2%;
+}
+main > article > header > h1 {
+    display: none;
+}
+header > h2 {
+    font-size: 2.1em;
+    color: #404040;
+}
+/* ---->>>> ZICHTBAARHEID VAN DE H1 OP DESKTOP <<<<---- */
+@media (min-width:55em) {
+    header > h1:nth-of-type(2) {
+        display: none;
+    }
+}
+/* Pagina */
+main {
+    width: 50%;
+    margin: auto;
+}
+a {
+    color: #686868;
+}
+body > section {
+    width: 50%;
+    margin-left: 25%;
+    display: inline-block;
+    vertical-align: top;
+    justify-content: center;
+    position: relative;
+}
+body > section > article {
+    float: left;
+    vertical-align: top;
+    justify-content: space-around;
+    width: 49%;
+    padding: 0.3em;
+    border: solid 0.1em;
+    margin: 0.1em;
+}
+/* ---->>>> SIDEBAR <<<<---- */
+aside {
+    width: 20%;
+    float: right;
+    position: absolute;
+    top: 19em;
+    right: 0.5em;
+}
+body > aside > section {
+    display: flex;
+    flex-direction: column;
+    float: right;
+    border: solid 0.15em;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    margin-bottom: 0.5em;
+}
+ul, li {
+    text-decoration: none;
+    list-style: none;
+}
+/* ---->>> FOOTER <<<<---- */
+body > footer {
+    clear: both;
+    background: #FFD300;
+    padding: 1em 1em 8em 1em;
+    margin: 0em -0.45em -1.5em -0.45em;
+}
+body > footer > section {
+    display: inline-block;
+    width: 25%;
+    float: left;
+    padding: 0 2em 0 0;
+}
+body > footer > section > h2 {
+    color: #404040;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+body > footer > section > p, ul {
+    font-size: 0.6em;
+}
+/* ---->>>> TABLET VERSIE <<<<---- */
+@media (max-width: 55em) {
+    html {
+        width: 100%;
+    }
+    main, .related {
+        width: 60%;
+        margin: 0% 20% 0% 20%;
+    }
+    /* ---->>>> NAVIGATIE <<<<---- */
+    body > header > h1 {
+        font-size: 2.5em;
+        padding: 0.5em 0em 0em 0.5em;
+    }
+    header > h1:nth-of-type(1) {
+        display: none;
+    }
+    body > header {
+        margin-left: -0.5em;
+        margin-right: -0.5em;
+    }
+    img {
+        width: 25%;
+    }
+    .flex-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .flex-item {
+        font-size: 80%;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 0%;
+    }
+    body > section {
+        width: 60%;
+        margin-left: 15%;
+        display: inline-block;
+        vertical-align: top;
+        justify-content: center;
+        position: relative;
+    }
+    body > section > article {
+        float: left;
+        vertical-align: top;
+        justify-content: space-around;
+        width: 49%;
+        padding: 0.3em;
+        border: solid 0.1em;
+        margin: 0.1em;
+    }
+    /* ---->>>> SIDEBAR <<<<---- */
+    body > aside {
+        width: 60%;
+        margin: 0% 20% 0% 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        top: 0em;
+    }
+    body > aside > section {
+        display: flex;
+        flex-direction: column;
+        border: solid 0.1em;
+        padding: 0.2em 0.5em 0.2em 0.5em;
+        margin-bottom: 0.5em;
+    }
+    #sitemap {
+        display: none;
+    }
+    body > footer {
+        clear: both;
+        background: #FFD300;
+        padding: 1em 1em 2em 1em;
+        margin: 0em -0.45em 1em -0.45em;
+    }
+    body > footer > section {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+    }
+    body > footer > section > h2 {
+        color: #404040;
+        font-size: 1em;
+        font-weight: 600;
+    }
+    body > footer > section > p {
+        font-size: 0.9em;
+        margin: 0em 0em 0.2em 0;
+    }
+}
+
+/* ---->>>> MOBIELE VERSIE <<<<---- */
+@media (max-width: 40em) {
+    html {
+        width: 100%;
+    }
+    /* ---->>>> NAVIGATIE <<<<---- */
+    body > header > h1 {
+        font-size: 150%;
+        padding: 0.8em 0em 0em 0.8em;
+        margin: 0.5em 0 0 0;
+    }
+    body > header > h1:nth-of-type(1) {
+        display: none;
+    }
+    body > header > p {
+        display: none;
+    }
+    img {
+        width: 12%;
+        float: right;
+        margin-right: 2.5%;
+        margin-top: -2em;
+        padding: auto;
+    }
+    .flex-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .flex-item {
+        font-size: 85%;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: 0.3em;
+    }
+    body > header > ul, li {
+        text-decoration: none;
+        list-style: none;
+        padding: 0.3em;
+        font-size: 1.3em;
+    }
+    body > header > form {
+        display: none;
+    }
+    /* ---->>>> PAGINA MOBIEL <<<<---- */
+    body {
+        width: 100%;
+        margin: auto;
+    }
+    main {
+        width: 90%;
+        margin: auto;
+    }
+    .related {
+        width: 90%;
+        margin: auto;
+    }
+    body > section {
+        width: 100%;
+        margin-left: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+    body > section > article {
+        float: left;
+        justify-content: space-around;
+        width: 100%;
+        padding: 0.3em;
+        border: solid 0.1em;
+        margin: 0.1em;
+    }
+    body > aside {
+        width: 90%;
+        margin-right: 2.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        top: 0em;
+    }
+    body > aside > section {
+        display: flex;
+        flex-direction: column;
+        border: solid 0.1em;
+        padding: 0.2em 0.5em 0.2em 0.5em;
+        margin-bottom: 0.5em;
+    }
+    /* ---->>>> FOOTER <<<<---- */
+    body > footer {
+        clear: both;
+        background: #FFD300;
+        padding: 1em 1em 0.1em 1em;
+        margin: 0em;
+    }
+    body > footer > section {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+    }
+    body > footer > section > h2 {
+        color: #404040;
+        font-size: 1em;
+        font-weight: 600;
+    }
+    body > footer > section > p {
+        font-size: 0.9em;
+        margin: 0em 0em 0.2em 0;
+    }
+    #sitemap {
+        display: none;
+    }
+}
+    /* ---->>>>  <<<<---- */
